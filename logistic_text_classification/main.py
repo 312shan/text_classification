@@ -13,10 +13,10 @@ from scipy.sparse import hstack
 class_names = ['toxic', 'severe_toxic', 'obscene', 'threat', 'insult', 'identity_hate']
 
 # 临时读取少量数据，为了方便调试和运行
-train = pd.read_csv('./input/train.csv').fillna(' ').head(10000)
-test = pd.read_csv('./input/test.csv').fillna(' ').head(1000)
-train.to_csv('./input/train_.csv', index=False, encoding='utf-8')
-test.to_csv('./input/test_.csv', index=False, encoding='utf-8')
+train = pd.read_csv('../data/input/train.csv').fillna(' ').head(10000)
+test = pd.read_csv('../data/input/test.csv').fillna(' ').head(1000)
+# train.to_csv('./input/train_.csv', index=False, encoding='utf-8')
+# test.to_csv('./input/test_.csv', index=False, encoding='utf-8')
 
 train_text = train['comment_text']
 test_text = test['comment_text']
